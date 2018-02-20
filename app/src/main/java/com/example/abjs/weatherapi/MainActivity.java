@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
@@ -68,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
             if (!mySharedPreferences.getReportCache().isEmpty()) {
                 counter_tv.setText("Counter: " + String.valueOf(mySharedPreferences.getCounter()));
                 JSONObject currentlyObj = new JSONObject(mySharedPreferences.getReportCache());
+                Typeface typeface = Typeface.createFromAsset(getAssets(),"fonts/NABILA.TTF");
+                counter_tv.setTypeface(typeface);
 
                 summary_tv.setText("Summary: " + currentlyObj.getString("summary"));
                 temperature_tv.setText("Temperature: " + String.valueOf(currentlyObj.getDouble("temperature")));

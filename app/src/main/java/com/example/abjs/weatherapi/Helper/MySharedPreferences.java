@@ -7,7 +7,7 @@ import android.util.Log;
 import com.example.abjs.weatherapi.R;
 
 /**
- * Created by ajuna on 2/19/2018.
+ * Created by Abidullah on 2/19/2018.
  */
 
 
